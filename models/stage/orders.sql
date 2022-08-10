@@ -1,7 +1,8 @@
 {{ config(
-    alias= 'customer'
+    alias= 'orders',
     schema= 'TEST_STAGE',
     database= 'TEST_DB' 
 )}}
 
-SELECT * FROM "TEST_DB"."TEST_SOURCE"."ORDERS"
+SELECT * 
+FROM {{ source('TEST_SOURCE', 'ORDERS') }}
