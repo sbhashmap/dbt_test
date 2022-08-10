@@ -4,6 +4,4 @@
     database= 'TEST_DB' 
 )}}
 
-SELECT * 
-FROM {{ source('TEST_SOURCE', 'CUSTOMER') }}
-where C_CUSTKEY NOT IN (14);
+SELECT * FROM "TEST_DB"."TEST_SOURCE"."CUSTOMER"

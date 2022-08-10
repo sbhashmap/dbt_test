@@ -1,9 +1,7 @@
 {{ config(
-    alias= 'order'
+    alias= 'customer'
     schema= 'TEST_STAGE',
     database= 'TEST_DB' 
 )}}
 
-SELECT * 
-FROM {{ source('TEST_SOURCE', 'ORDER') }}
-where 
+SELECT * FROM "TEST_DB"."TEST_SOURCE"."ORDERS"
